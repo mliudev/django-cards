@@ -1,4 +1,4 @@
-from django.shortcuts import render_to_response
+from django.shortcuts import render
 from django.http import HttpResponse
 from trello_cards.utils import APIParser
 
@@ -7,4 +7,4 @@ from trello_cards.utils import APIParser
 def home(request):
     parser = APIParser()
     trello_lists = parser.lists
-    return render_to_response('home.html', {'trello_lists': trello_lists})
+    return render(request, 'home.html', context={'trello_lists': trello_lists})

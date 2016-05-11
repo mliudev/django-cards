@@ -8,6 +8,13 @@ setup(
     name = 'django-cards',
     version = '0.1',
     packages = find_packages(),
+    install_requires = [
+        'Django>=1.8, <1.9',
+        'requests',
+        'django-bootstrap3',
+        'libsass',
+        'django-sass-processor',
+    ],
     include_package_data = True,
     license = 'MIT License',
     description = "A simple app to view trello's development board",

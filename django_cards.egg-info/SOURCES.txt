@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+django_cards.egg-info/PKG-INFO
+django_cards.egg-info/SOURCES.txt
+django_cards.egg-info/dependency_links.txt
+django_cards.egg-info/top_level.txt
+trello_cards/__init__.py
+trello_cards/admin.py
+trello_cards/models.py
+trello_cards/tests.py
+trello_cards/urls.py
+trello_cards/utils.py
+trello_cards/views.py
+trello_cards/migrations/__init__.py
+trello_cards/templates/home.html

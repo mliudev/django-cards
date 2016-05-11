@@ -1,0 +1,40 @@
+{# Load the tag library #}
+{% load bootstrap3 %}
+
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+{# Display django.contrib.messages as Bootstrap alerts #}
+{% bootstrap_messages %}
+
+{# Main display page #}
+<div class="container">
+	<div class="jumbotron">
+		<h1 align="center">Trello Development Board Card List</h1>
+	</div>
+	{% if trello_lists %}
+		<table style="width:75%" align="center" class="table table-striped">
+			<tr>
+				<td>
+					<strong>Card Name</strong>
+				</td>
+				<td>
+					<strong>List</strong>
+				</td>
+			</tr>
+			{% for list in trello_lists %}
+				{% for card in list.cards %}
+					<tr>
+						<td>
+							<a href={{card.link}}>{{card.name}}</a>
+						</td>
+						<td>{{list.name}}</td>
+					</tr>
+				{% endfor %}
+			{% endfor %}
+		</table>
+	{% else %}
+		<p>You probably screwed up somewhere.</p>
+	{% endif %}
+</div>
